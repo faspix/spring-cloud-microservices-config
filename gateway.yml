@@ -50,12 +50,13 @@ zuul:
     socket-timeout-millis: 20000
 
 management:
-  endpoint:
-    gateway: enabled
   endpoints:
     web:
       exposure:
-        include: *
+        include: "*"
+  endpoint:
+    gateway:
+      enabled: true
 
 server:
   port: 8989
