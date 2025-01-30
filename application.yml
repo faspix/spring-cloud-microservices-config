@@ -2,6 +2,12 @@ logging:
   level:
     org.springframework.security: INFO
 
+resilience4j.retry:
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 2s
+
 eureka:
   instance:
     preferIpAddress: true
