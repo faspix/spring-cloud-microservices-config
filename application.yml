@@ -2,13 +2,11 @@ logging:
   level:
     org.springframework.security: INFO
 
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 20000
+resilience4j.retry:
+    configs:
+      default:
+        max-attempts: 3
+        wait-duration: 2s
 
 eureka:
   instance:
